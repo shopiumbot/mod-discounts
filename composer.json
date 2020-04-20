@@ -12,6 +12,9 @@
             "homepage": "https://pixelion.com.ua"
         }
     ],
+    "require": {
+        "panix/wgt-jstree": "dev-master"
+    },
     "autoload": {
         "psr-4": {
             "shopium\\mod\\discounts\\": ""
