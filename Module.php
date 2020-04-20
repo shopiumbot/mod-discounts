@@ -6,7 +6,7 @@ use shopium\mod\discounts\models\Discount;
 use Yii;
 use yii\base\BootstrapInterface;
 use panix\engine\WebModule;
-use shopium\mod\admin\widgets\sidebar\BackendNav;
+use panix\mod\admin\widgets\sidebar\BackendNav;
 
 class Module extends WebModule implements BootstrapInterface
 {
