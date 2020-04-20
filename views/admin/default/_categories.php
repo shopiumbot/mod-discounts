@@ -1,5 +1,5 @@
 <?php
-use shopium\mod\shop\models\Category;
+use core\modules\shop\models\Category;
 use panix\engine\Html;
 
 ?>

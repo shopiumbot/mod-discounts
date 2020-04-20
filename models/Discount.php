@@ -4,8 +4,7 @@ namespace shopium\mod\discounts\models;
 
 use Yii;
 use panix\engine\db\ActiveRecord;
-use yii\behaviors\TimestampBehavior;
-use yii\db\Expression;
+
 
 /**
  * Class Discount
