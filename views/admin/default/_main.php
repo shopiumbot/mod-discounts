@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\ArrayHelper;
-use shopium\mod\shop\models\Manufacturer;
+use core\modules\shop\models\Manufacturer;
 use panix\engine\jui\DatetimePicker;
 
 /**
