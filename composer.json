@@ -1,8 +1,8 @@
 {
-    "name": "panix/mod-discounts",
+    "name": "shopium/mod-discounts",
     "description": "Module discounts",
-    "keywords": ["pixelion-cms", "module", "discounts"],
-    "homepage": "https://github.com/andrtechno/mod-discounts",
+    "keywords": ["module", "discounts"],
+    "homepage": "https://github.com/shopium/mod-discounts",
     "type": "yii2-extension",
     "license": "MIT",
     "authors": [
@@ -14,7 +14,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "panix\\mod\\discounts\\": ""
+            "shopium\\mod\\discounts\\": ""
         }
     }
 }
