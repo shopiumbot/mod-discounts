@@ -1,6 +1,6 @@
 <?php
 
-namespace panix\mod\discounts\migrations;
+namespace shopium\mod\discounts\migrations;
 
 /**
  * Generation migrate by PIXELION CMS
@@ -12,7 +12,7 @@ namespace panix\mod\discounts\migrations;
  */
 
 use panix\engine\db\Migration;
-use panix\mod\discounts\models\Discount;
+use shopium\mod\discounts\models\Discount;
 
 class m170908_104527_discounts extends Migration
 {

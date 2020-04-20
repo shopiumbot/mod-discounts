@@ -1,6 +1,6 @@
 <?php
 
-namespace panix\mod\discounts;
+namespace shopium\mod\discounts;
 
 use yii\web\AssetBundle;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace panix\mod\discounts\commands;
+namespace shopium\mod\discounts\commands;
 
 use Yii;
 use panix\engine\console\controllers\ConsoleController;
-use panix\mod\shop\models\Product;
-use panix\mod\discounts\models\Discount;
+use shopium\mod\shop\models\Product;
+use shopium\mod\discounts\models\Discount;
 
 class DiscountController extends ConsoleController
 {

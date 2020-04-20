@@ -1,12 +1,12 @@
 <?php
 
-namespace panix\mod\discounts;
+namespace shopium\mod\discounts;
 
-use panix\mod\discounts\models\Discount;
+use shopium\mod\discounts\models\Discount;
 use Yii;
 use yii\base\BootstrapInterface;
 use panix\engine\WebModule;
-use panix\mod\admin\widgets\sidebar\BackendNav;
+use shopium\mod\admin\widgets\sidebar\BackendNav;
 
 class Module extends WebModule implements BootstrapInterface
 {

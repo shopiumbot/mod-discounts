@@ -1,10 +1,10 @@
 <?php
 use yii\helpers\ArrayHelper;
-use panix\mod\shop\models\Manufacturer;
+use shopium\mod\shop\models\Manufacturer;
 use panix\engine\jui\DatetimePicker;
 
 /**
- * @var \panix\mod\discounts\models\Discount $model
+ * @var \shopium\mod\discounts\models\Discount $model
  * @var \panix\engine\bootstrap\ActiveForm $form
  */
 

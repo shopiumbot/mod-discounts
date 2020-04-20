@@ -1,11 +1,11 @@
 <?php
 
-namespace panix\mod\discounts\models;
+namespace shopium\mod\discounts\models;
 
 
 use yii\base\Model;
 use panix\engine\data\ActiveDataProvider;
-use panix\mod\discounts\models\Discount;
+use shopium\mod\discounts\models\Discount;
 
 
 class DiscountSearch extends Discount

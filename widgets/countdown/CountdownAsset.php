@@ -1,6 +1,6 @@
 <?php
 
-namespace panix\mod\discounts\widgets\countdown;
+namespace shopium\mod\discounts\widgets\countdown;
 
 use yii\web\AssetBundle;
 

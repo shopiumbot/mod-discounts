@@ -1,6 +1,6 @@
 <?php
 
-namespace panix\mod\discounts\models;
+namespace shopium\mod\discounts\models;
 
 use Yii;
 use panix\engine\db\ActiveRecord;
@@ -18,7 +18,7 @@ use yii\db\Expression;
  * @property integer $start_date
  * @property integer $end_date
  *
- * @package panix\mod\discounts\models
+ * @package shopium\mod\discounts\models
  *
  */
 class Discount extends ActiveRecord

@@ -1,10 +1,10 @@
 <?php
 
-namespace panix\mod\discounts\components;
+namespace shopium\mod\discounts\components;
 
 use Yii;
 use yii\db\ActiveRecord;
-use panix\mod\discounts\models\Discount;
+use shopium\mod\discounts\models\Discount;
 use yii\base\Behavior;
 
 /**
@@ -17,7 +17,7 @@ use yii\base\Behavior;
  * @property mixed $discountSum
  * @property mixed $discountSumNum
  *
- * @package panix\mod\discounts\components
+ * @package shopium\mod\discounts\components
  */
 class DiscountBehavior extends Behavior
 {
@@ -53,7 +53,7 @@ class DiscountBehavior extends Behavior
      */
     public function afterFind()
     {
-        /** @var \panix\mod\shop\models\Product $owner */
+        /** @var \shopium\mod\shop\models\Product $owner */
         $owner = $this->owner;
         if (!$owner->isNewRecord) {
             if ($this->discounts === null) {
@@ -139,7 +139,7 @@ class DiscountBehavior extends Behavior
      */
     protected function applyDiscount(Discount $discount)
     {
-        /** @var \panix\mod\shop\models\Product $owner */
+        /** @var \shopium\mod\shop\models\Product $owner */
         $owner = $this->owner;
         if ($this->hasDiscount === null) {
 

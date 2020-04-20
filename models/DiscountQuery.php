@@ -1,6 +1,6 @@
 <?php
 
-namespace panix\mod\discounts\models;
+namespace shopium\mod\discounts\models;
 
 use yii\db\ActiveQuery;
 

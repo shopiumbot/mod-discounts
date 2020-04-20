@@ -1,11 +1,11 @@
 <?php
 
-namespace panix\mod\discounts\controllers\admin;
+namespace shopium\mod\discounts\controllers\admin;
 
 use Yii;
 use panix\engine\controllers\AdminController;
-use panix\mod\discounts\models\Discount;
-use panix\mod\discounts\models\DiscountSearch;
+use shopium\mod\discounts\models\Discount;
+use shopium\mod\discounts\models\DiscountSearch;
 
 class DefaultController extends AdminController
 {
@@ -69,7 +69,7 @@ class DefaultController extends AdminController
             'url' => ['index']
         ];
         $this->breadcrumbs[] = $this->pageName;
-        \panix\mod\discounts\DiscountAsset::register($this->view);
+        \shopium\mod\discounts\DiscountAsset::register($this->view);
 
 
         $post = Yii::$app->request->post();
