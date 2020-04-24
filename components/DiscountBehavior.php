@@ -53,7 +53,7 @@ class DiscountBehavior extends Behavior
      */
     public function afterFind()
     {
-        /** @var \shopium\mod\shop\models\Product $owner */
+        /** @var \core\modules\shop\models\Product $owner */
         $owner = $this->owner;
         if (!$owner->isNewRecord) {
             if ($this->discounts === null) {
