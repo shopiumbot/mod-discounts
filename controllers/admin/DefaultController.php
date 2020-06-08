@@ -3,7 +3,7 @@
 namespace shopium\mod\discounts\controllers\admin;
 
 use Yii;
-use panix\engine\controllers\AdminController;
+use core\components\controllers\AdminController;
 use shopium\mod\discounts\models\Discount;
 use shopium\mod\discounts\models\DiscountSearch;
 
