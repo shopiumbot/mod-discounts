@@ -25,7 +25,7 @@ echo GridView::widget([
             'attribute' => 'start_date',
             'contentOptions' => ['class' => 'text-center'],
             'value' => function ($model) {
-                return \panix\engine\CMS::date($model->start_date);
+                return \panix\engine\CMS::date(strtotime($model->start_date));
             }
         ],
         [
@@ -33,7 +33,7 @@ echo GridView::widget([
             'attribute' => 'end_date',
             'contentOptions' => ['class' => 'text-center'],
             'value' => function ($model) {
-                return \panix\engine\CMS::date($model->end_date);
+                return \panix\engine\CMS::date(strtotime($model->end_date));
             }
         ],
         [
