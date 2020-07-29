@@ -11,7 +11,7 @@ namespace shopium\mod\discounts\migrations;
  * Class m170908_104527_discounts
  */
 
-use panix\engine\db\Migration;
+use yii\db\Migration;
 use shopium\mod\discounts\models\Discount;
 
 class m170908_104527_discounts extends Migration
@@ -22,7 +22,7 @@ class m170908_104527_discounts extends Migration
 
     public function up()
     {
-
+        $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci ENGINE=InnoDB';
         $this->createTable(Discount::tableName(), [
             'id' => $this->primaryKey()->unsigned(),
             'name' => $this->string(255)->notNull(),
@@ -33,21 +33,21 @@ class m170908_104527_discounts extends Migration
             'switch' => $this->boolean()->defaultValue(1),
             'created_at' => $this->integer(11)->null(),
             'updated_at' => $this->integer(11)->null(),
-        ], $this->tableOptions);
+        ], $tableOptions);
 
 
         $this->createTable(self::$categoryTable, [
             'id' => $this->primaryKey()->unsigned(),
             'discount_id' => $this->integer()->unsigned(),
             'category_id' => $this->integer()->unsigned(),
-        ], $this->tableOptions);
+        ], $tableOptions);
 
 
         $this->createTable(self::$manufacturerTable, [
             'id' => $this->primaryKey()->unsigned(),
             'discount_id' => $this->integer()->unsigned(),
             'manufacturer_id' => $this->integer()->unsigned(),
-        ], $this->tableOptions);
+        ], $tableOptions);
 
 
         $this->createIndex('switch', Discount::tableName(), 'switch');
