@@ -6,9 +6,19 @@ use Yii;
 use core\components\controllers\AdminController;
 use shopium\mod\discounts\models\Discount;
 use shopium\mod\discounts\models\DiscountSearch;
+use yii\web\HttpException;
 
 class DefaultController extends AdminController
 {
+    public function beforeAction($action)
+    {
+        if (in_array(Yii::$app->user->planId, [2, 3, 4])) {
+            return parent::beforeAction($action);
+        } else {
+            throw new HttpException(403, Yii::t('app/error', 403));
+        }
+    }
+
     public function actions()
     {
         return [
@@ -79,7 +89,6 @@ class DefaultController extends AdminController
         }
         if (!isset($post['Discount']['categories']))
             $model->categories = [];
-
 
 
         $isNew = $model->isNewRecord;
