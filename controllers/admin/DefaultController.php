@@ -36,12 +36,6 @@ class DefaultController extends AdminController
     public function actionIndex()
     {
         $this->pageName = Yii::t('discounts/default', 'MODULE_NAME');
-
-
-        $this->breadcrumbs[] = [
-            'label' => Yii::t('shop/default', 'MODULE_NAME'),
-            'url' => ['/admin/shop']
-        ];
         $this->breadcrumbs[] = $this->pageName;
 
         $this->buttons = [
@@ -69,11 +63,6 @@ class DefaultController extends AdminController
         $this->pageName = ($model->isNewRecord) ? Yii::t('discounts/default', 'Создание скидки') :
             Yii::t('discounts/default', 'Редактирование скидки');
 
-
-        $this->breadcrumbs[] = [
-            'label' => Yii::t('shop/default', 'MODULE_NAME'),
-            'url' => ['/admin/shop']
-        ];
         $this->breadcrumbs[] = [
             'label' => Yii::t('discounts/default', 'MODULE_NAME'),
             'url' => ['index']
