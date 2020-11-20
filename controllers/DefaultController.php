@@ -1,6 +1,6 @@
 <?php
 
-namespace shopium\mod\discounts\controllers\admin;
+namespace shopium\mod\discounts\controllers;
 
 use Yii;
 use core\components\controllers\AdminController;
@@ -36,7 +36,7 @@ class DefaultController extends AdminController
     public function actionIndex()
     {
         $this->pageName = Yii::t('discounts/default', 'MODULE_NAME');
-        $this->breadcrumbs[] = $this->pageName;
+        $this->view->params['breadcrumbs'][] = $this->pageName;
 
         $this->buttons = [
             [
@@ -59,15 +59,13 @@ class DefaultController extends AdminController
     {
         $model = Discount::findModel($id, Yii::t('discounts/default', 'NO_FOUND_DISCOUNT'));
 
+        $this->pageName = Yii::t('discounts/default', ($model->isNewRecord) ? 'CREATE' : 'UPDATE');
 
-        $this->pageName = ($model->isNewRecord) ? Yii::t('discounts/default', 'Создание скидки') :
-            Yii::t('discounts/default', 'Редактирование скидки');
-
-        $this->breadcrumbs[] = [
+        $this->view->params['breadcrumbs'][] = [
             'label' => Yii::t('discounts/default', 'MODULE_NAME'),
             'url' => ['index']
         ];
-        $this->breadcrumbs[] = $this->pageName;
+        $this->view->params['breadcrumbs'][] = $this->pageName;
         \shopium\mod\discounts\DiscountAsset::register($this->view);
 
 

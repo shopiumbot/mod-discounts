@@ -8,13 +8,11 @@ use panix\engine\Html;
     </div>
 
     <div class="form-group row">
-        <div class="col-sm-4">
-            <?= Html::label(Yii::t('app/default', 'Поиск:'), 'search-discount-category', ['class' => 'control-label']); ?>
-        </div>
-        <div class="col-sm-8">
+        <div class="col-sm-12">
             <?= Html::textInput('search', null, [
                 'id' => 'search-discount-category',
                 'class' => 'form-control',
+                'placeholder' => Yii::t('default', 'SEARCH'),
                 'onClick' => '$("#CategoryTree").jstree("search", $(this).val());'
             ]); ?>
         </div>

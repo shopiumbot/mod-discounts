@@ -7,6 +7,7 @@ use Yii;
 use yii\base\BootstrapInterface;
 use core\components\WebModule;
 use panix\mod\admin\widgets\sidebar\BackendNav;
+use yii\web\GroupUrlRule;
 
 class Module extends WebModule implements BootstrapInterface
 {
@@ -29,6 +30,15 @@ class Module extends WebModule implements BootstrapInterface
                 ->applyDate()
                 ->all();
         }
+        $groupUrlRule = new GroupUrlRule([
+            'prefix' => $this->id,
+            'rules' => [
+                ''=> 'default/index',
+                '<controller:[0-9a-zA-Z_\-]+>'=> '<controller>/index',
+                '<controller:[0-9a-zA-Z_\-]+>/<action:[0-9a-zA-Z_\-]+>'=> '<controller>/<action>',
+            ],
+        ]);
+        $app->getUrlManager()->addRules($groupUrlRule->rules, true);
     }
 
     public function getInfo()
