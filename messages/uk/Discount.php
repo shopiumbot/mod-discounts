@@ -11,5 +11,6 @@ return [
     'HINT_MANUFACTURERS' => 'Щоб знижка заробила, необхідно вказати категорію',
     'HINT_USER_ROLES' => '<strong>Увага:</strong> Знижки для адміністраторів заборонені.',
     'TAB_CATEGORIES' => 'Категорії',
-    'TAB_MAIN' => 'Основні'
+    'TAB_MAIN' => 'Основні',
+    'SELECT_EMPTY_MANUFACTURER' => '&mdash; Укажите виробника &mdash;'
 ];

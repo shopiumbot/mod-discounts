@@ -16,7 +16,7 @@ use panix\engine\jui\DatetimePicker;
 
 <?= $form->field($model, 'manufacturers')
     ->dropDownList(ArrayHelper::map(Manufacturer::find()->all(), 'id', 'name'), [
-        'prompt' => 'Укажите производителя',
+        'prompt' => html_entity_decode($model::t('SELECT_EMPTY_MANUFACTURER')),
         'multiple' => 'multiple'
     ])->hint($model::t('HINT_MANUFACTURERS'));
 ?>

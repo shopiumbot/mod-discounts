@@ -11,5 +11,6 @@ return [
     'HINT_MANUFACTURERS' => 'Чтобы скидка заработала, необходимо указать категорию',
     'HINT_USER_ROLES' => '<b>Внимание:</b> Скидки для администраторов запрещены.',
     'TAB_CATEGORIES' => 'Категории',
-    'TAB_MAIN' => 'Основные'
+    'TAB_MAIN' => 'Основные',
+    'SELECT_EMPTY_MANUFACTURER' => '&mdash; Укажите производителя &mdash;'
 ];

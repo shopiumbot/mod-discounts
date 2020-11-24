@@ -11,5 +11,6 @@ return [
     'HINT_MANUFACTURERS' => 'For the discount to work, you must specify the category',
     'HINT_USER_ROLES' => '<strong>Warning:</strong> Discounts for admins are not allowed.',
     'TAB_CATEGORIES' => 'Categories',
-    'TAB_MAIN' => 'Main'
+    'TAB_MAIN' => 'Main',
+    'SELECT_EMPTY_MANUFACTURER' => '&mdash; Select manufacturer &mdash;'
 ];

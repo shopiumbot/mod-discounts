@@ -46,9 +46,9 @@ echo \panix\ext\jstree\JsTree::widget([
         'tie_selection' => false,
     ],
 ]);
-
+//\panix\engine\CMS::dump($model->getCategories());die;
 foreach ($model->getCategories() as $id) {
 
-    $this->registerJs("$('#jsTree_CategoryTree').checkNode({$id});", yii\web\View::POS_END, "checkNode{$id}");
+    $this->registerJs("$('#CategoryTree').checkNode({$id});", yii\web\View::POS_END, "checkNode{$id}");
 }
 

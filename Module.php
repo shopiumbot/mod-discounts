@@ -23,7 +23,7 @@ class Module extends WebModule implements BootstrapInterface
      */
     public function bootstrap($app)
     {
-        if (Yii::$app->id !== 'console' && $this->discounts === null) {
+        if ($this->discounts === null) {
 
             $this->discounts = Discount::find()
                 ->published()
