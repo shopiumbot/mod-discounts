@@ -209,29 +209,30 @@ class Discount extends ActiveRecord
      */
     public function afterSave($insert, $changedAttributes)
     {
-        $this->clearRelations();
+        if (!isset($changedAttributes['switch'])) {
+            $this->clearRelations();
 
-        // Process manufacturers
-        if (!empty($this->_manufacturers)) {
-            foreach ($this->_manufacturers as $id) {
-                self::getDb()->createCommand()->insert(self::tableNameManufacturers(), [
-                    'discount_id' => $this->id,
-                    'manufacturer_id' => $id,
-                ])->execute();
+            // Process manufacturers
+            if (!empty($this->_manufacturers)) {
+                foreach ($this->_manufacturers as $id) {
+                    self::getDb()->createCommand()->insert(self::tableNameManufacturers(), [
+                        'discount_id' => $this->id,
+                        'manufacturer_id' => $id,
+                    ])->execute();
+                }
+            }
+
+            // Process categories
+            if (!empty($this->_categories)) {
+                foreach (array_unique($this->_categories) as $id) {
+
+                    self::getDb()->createCommand()->insert(self::tableNameCategories(), [
+                        'discount_id' => $this->id,
+                        'category_id' => $id,
+                    ])->execute();
+                }
             }
         }
-
-        // Process categories
-        if (!empty($this->_categories)) {
-            foreach (array_unique($this->_categories) as $id) {
-
-                self::getDb()->createCommand()->insert(self::tableNameCategories(), [
-                    'discount_id' => $this->id,
-                    'category_id' => $id,
-                ])->execute();
-            }
-        }
-
         parent::afterSave($insert, $changedAttributes);
     }
 }
